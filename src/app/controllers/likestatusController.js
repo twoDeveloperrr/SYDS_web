@@ -171,24 +171,25 @@ exports.getLike = async function (req,res){
             }
 
             const getLikesQuery = `
-                                select D.dpName '동영상 제목',
+                                select D.dpName as '동영상 제목',
                                     case
-                                        when count(D.likesCount)<1000
-                                    then concat(count(D.likesCount), ' ')
-                                        when count(D.likesCount) between 1000 and 10000
-                                    then concat(count(D.likesCount), ' 천')
-                                        when count(D.likesCount)>10000
-                                    then concat(count(D.likesCount), ' 만')
-                                end '좋아요'
+                                        when D.likesCount<1000
+                                    then concat(D.likesCount, ' ')
+                                        when D.likesCount between 1000 and 10000
+                                    then concat(D.likesCount, ' 천')
+                                        when D.likesCount>10000
+                                    then concat(D.likesCount, ' 만')
+                                end as likeStatus
                                 from likes L
                                 left join display D
                                 on L.displayIdx = D.displayIdx
-                                where L.displayIdx = ? and likeStatus = 1;;
+                                where L.displayIdx = ? and likeStatus = 1;
                                 `;
 
             const [getLikes] = await connection.query(getLikesQuery,displayIdx);
             let responseData = resApi(true,100,'api 성공')
             responseData.result = getLikes;
+            console.log(getLikes[0])
             connection.release();
             return res.json(responseData);
         }catch (err) {

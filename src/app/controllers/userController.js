@@ -261,11 +261,11 @@ exports.login = async function (req, res) {
         } catch (err) {
             logger.error(`example non transaction Query error\n: ${JSON.stringify(err)}`);
             connection.release();
-            return resApi(false,200,"trx fail");
+            return res.json(resApi(false,200,"trx fail"));
         }
     } catch (err) {
         logger.error(`example non transaction DB Connection error\n: ${JSON.stringify(err)}`);
-        return resApi(false,201,"db connection fail");
+        return res.json(resApi(false,201,"db connection fail"));
     }
 };
 

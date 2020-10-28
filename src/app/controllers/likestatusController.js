@@ -190,6 +190,8 @@ exports.getLike = async function (req,res){
             let responseData = resApi(true,100,'api 성공')
             responseData.result = getLikes;
             console.log(getLikes[0])
+            console.log(getLikes[0])
+            console.log(getLikes[0])
             connection.release();
             return res.json(responseData);
         }catch (err) {

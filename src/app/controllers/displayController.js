@@ -78,10 +78,9 @@ exports.getDisplay = async function (req,res){
         const connection = await pool.getConnection(async conn=>conn());
         try{
             const getExistUserIdxQuery =`select exists(select displayIdx from display where displayIdx = ?) as exist;`;
-
             const [isExist] = await connection.query(getExistUserIdxQuery,displayIdx);
-
             console.log(isExist);
+            console.log("dusu");
 
             if(!isExist[0].exist){
                 return res.json(resApi(false,200,'존재하지 않는 인덱스 입니다.'));
@@ -120,7 +119,7 @@ exports.getDisplay = async function (req,res){
         }catch (err) {
             logger.error(`example non transaction Query error\n: ${JSON.stringify(err)}`);
             connection.release();
-            return resApi(false,200,"trx fail");
+            return res.json(resApi(false,200,"trx fail"));
         }
     }catch (err){
         logger.error(`example non transaction DB Connection error\n: ${JSON.stringify(err)}`);

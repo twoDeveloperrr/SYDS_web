@@ -80,7 +80,7 @@ exports.getDisplay = async function (req,res){
             const getExistUserIdxQuery =`select exists(select displayIdx from display where displayIdx = ?) as exist;`;
             const [isExist] = await connection.query(getExistUserIdxQuery,displayIdx);
             console.log(isExist);
-            console.log("dusu");
+            console.log("두수");
 
             if(!isExist[0].exist){
                 return res.json(resApi(false,200,'존재하지 않는 인덱스 입니다.'));

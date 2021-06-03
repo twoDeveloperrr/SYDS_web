@@ -2,9 +2,28 @@ const express = require('express');
 const compression = require('compression');
 const methodOverride = require('method-override');
 
+//2021.05.28(금)
+var LocalStrategy = require('passport-local').Strategy;
+var session = require('express-session');
+var flash = require('connect-flash');
+var passport = require('passport');
+
 var cors = require('cors');
 module.exports = function () {
     const app = express();
+
+    //2021.05.28(금)
+    app.set('view engine', 'ejs');
+    // Middleware를 사용할 수 있게 설정
+    app.use(session({
+        secret: 'keyboard cat',
+        resave: false,
+        saveUninitialized: true
+    }));
+
+    app.use(passport.initialize());
+    app.use(passport.session());
+    app.use(flash()); //Message를 쉽게 전달
 
     app.use(compression());
 
@@ -18,37 +37,9 @@ module.exports = function () {
     // app.use(express.static(process.cwd() + '/public'));
 
     /* App (Android, iOS) */
-    require('../src/app/routes/indexRoute')(app);
-    require('../src/app/routes/userRoute')(app);
-
-    require('../src/app/routes/testRoute')(app);
-
-    // displayRoute 연결
-    require('../src/app/routes/displayRoute')(app);
-
-    // commentRoute 연결
-    require('../src/app/routes/commentRoute')(app);
-
-    // profileRoute 연결
-    require('../src/app/routes/profileRoute')(app);
-
-    // likestatus 연결
-    require('../src/app/routes/likestatusRoute')(app);
-
-    // subscribe 연결
-    require('../src/app/routes/subscribeRoute')(app);
-
-    // record 연결
-    require('../src/app/routes/recordRoute')(app);
-
-
-    // use
-    require('../src/app/routes/useRoute')(app);
-
-    //
-
+   
     /* Web */
-    // require('../src/web/routes/indexRoute')(app);
+    require('../src/web/routes/userRoute')(app);
 
     /* Web Admin*/
     // require('../src/web-admin/routes/indexRoute')(app);

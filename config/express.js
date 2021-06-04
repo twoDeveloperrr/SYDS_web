@@ -7,6 +7,7 @@ var LocalStrategy = require('passport-local').Strategy;
 var session = require('express-session');
 var flash = require('connect-flash');
 var passport = require('passport');
+const CiscoSparkStrategy = require('passport-cisco-spark').Strategy;
 
 var cors = require('cors');
 module.exports = function () {

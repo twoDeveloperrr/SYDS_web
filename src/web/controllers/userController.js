@@ -1,6 +1,5 @@
 const passport = require('passport');
 const LocalStrategy = require('passport-local').Strategy;
-const CiscoSparkStrategy = require('passport-cisco-spark').Strategy;
 const { pool } = require('../../../config/database');
 const { logger } = require('../../../config/winston');
 
@@ -28,34 +27,27 @@ passport.serializeUser(function (user, done) {
     done(null, user.email);
 })
 
+
 // 세션값에 필요한 값을 표현
 passport.deserializeUser(function (id, done) {
     console.log('passport get id : ', id);
     done(null, id);
 })
 
-passport.use(new CiscoSparkStrategy({
-    clientID: "",
-    clientSecret: "",
-    callbackURL: "http://localhost/oauth/spark/callback",
-    passReqToCallback: true
-  }, async function(accessToken, refreshToken, profile, done) {
-      console.log("hi")
-      console.log('CiscoSparkStrategy', accessToken);
-    // User.findOrCreate({ sparkId: profile.id }, function (err, user) {
-    //   return done(err, user);
-    // });
-  }
-));
 
-exports.getHome = async function (req, res) {
-    var msg;
-    var errMsg = req.flash('error');
-    if (errMsg) msg = errMsg;
-
-    console.log('HI');
-    res.render('join.ejs', { 'message': msg });
-};
+// passport.use(new CiscoSparkStrategy({
+//     clientID: "Cb3411ab9e0c38768f47ce45ae6910e9ceb2f2cc03c59d36c9f3fe3bf06b90bf2",
+//     clientSecret: "ef14ba9f5cc0191ba24d07e0ecf02a64d599605cadaf5acd3aa2736670f3c791",
+//     callbackURL: "http://localhost/oauth/spark/callback",
+//     passReqToCallback: true
+//   }, async function(accessToken, refreshToken, profile, done) {
+//       console.log("cisco")
+//       console.log('CiscoSparkStrategy', accessToken);
+//     // User.findOrCreate({ sparkId: profile.id }, function (err, user) {
+//     //   return done(err, user);
+//     // });
+//   }
+// ));
 
 
 //passport를 활용한 로그인 구현
@@ -125,6 +117,17 @@ passport.use('local-join', new LocalStrategy({
         console.log(err);
     }
 }));
+
+
+exports.getHome = async function (req, res) {
+    var msg;
+    var errMsg = req.flash('error');
+    if (errMsg) msg = errMsg;
+
+    console.log('HI');
+    res.render('join.ejs', { 'message': msg });
+};
+
 
 
 

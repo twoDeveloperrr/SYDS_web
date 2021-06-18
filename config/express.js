@@ -15,6 +15,8 @@ module.exports = function () {
 
     //2021.05.28(금)
     app.set('view engine', 'ejs');
+
+    app.use(express.static('views'));
     // Middleware를 사용할 수 있게 설정
     app.use(session({
         secret: 'keyboard cat',
@@ -41,6 +43,7 @@ module.exports = function () {
    
     /* Web */
     require('../src/web/routes/userRoute')(app);
+    require('../src/web/routes/webexOauthRoute')(app);
 
     /* Web Admin*/
     // require('../src/web-admin/routes/indexRoute')(app);

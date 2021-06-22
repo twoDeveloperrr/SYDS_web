@@ -16,9 +16,11 @@ module.exports = function (app) {
         res.redirect('/');
       });
     
+    app.route('/room').post(oauth.makeRoom);
+    
 
 
-    // app.route('/oauth/spark/callback').post(passport.authenticate('cisco-spark', {
+    // app.route('/room').post(passport.authenticate('cisco-spark', {
     //     successRedirect: '/',
     //     faliureRedirect: '/', //사용자가 이미 있다.
     //     failureFlush: true

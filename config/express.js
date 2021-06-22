@@ -9,6 +9,8 @@ var flash = require('connect-flash');
 var passport = require('passport');
 const CiscoSparkStrategy = require('passport-cisco-spark').Strategy;
 
+const bodyParser = require('body-parser');
+
 var cors = require('cors');
 module.exports = function () {
     const app = express();
@@ -34,6 +36,8 @@ module.exports = function () {
 
     app.use(express.urlencoded({extended: true}));
 
+    app.use(bodyParser.urlencoded({extended: true}));
+
     app.use(methodOverride());
 
     app.use(cors());
@@ -44,6 +48,8 @@ module.exports = function () {
     /* Web */
     require('../src/web/routes/userRoute')(app);
     require('../src/web/routes/webexOauthRoute')(app);
+
+    require('../src/web/routes/userLoginRoute')(app);
 
     /* Web Admin*/
     // require('../src/web-admin/routes/indexRoute')(app);

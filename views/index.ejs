@@ -22,6 +22,12 @@
       <button type="submit">로그인</button>
     </form>
 
+    <form action="/logout" method="get">
+      <button type="submit">로그아웃</button>
+    </form>
+
+    <input type="button" value="버튼" onClick="location.href=''">
+
     <ul id="topmenu">
       <li data-menuanchor="p1" class="m1 active"><a href="#p1">삼양데이타시스템</a></li>
       <li data-menuanchor="p2" class="m2"><a href="#p2">사업개요</a></li>
@@ -30,9 +36,19 @@
       <li data-menuanchor="p5" class="m5"><a href="#p5"><img src="img/icon/html_icon.png" alt="아이콘" class="f_img"><img
             src="img/icon/css_icon.png" alt="아이콘" class="f_img"><img src="img/icon/jquery_icon.png" alt="아이콘"></a></li>
     </ul>
-  </nav>
-  <div id="fullpage">
-    <div id="d1" class="section" data-anchor="p1"></div>
+    </nav>
+    <div id="fullpage">
+      <div id="d1" class="section" data-anchor="p1">
+
+        <form action="/room" method="post">
+          <div class="inputWrap">
+            <div class="destination">
+              <span> MeetingRoomNumber </span> <input type="text" name="destination"><input class="sendbtn" type="submit">
+            </div>
+          </div>
+        </form>
+    
+      </div>
     <div id="d2" class="section" data-anchor="p2">
       <div id="d2_1" class="slide">
         <div class="il_frame illust">

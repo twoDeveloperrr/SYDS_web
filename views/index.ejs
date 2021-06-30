@@ -17,16 +17,20 @@
 <body>
   <nav>
     <a href="#p1" id="menu_logo"><img src="img/logo.png" alt="로고이미지"></a>
-   
+
     <form action="/auth/spark" method="get">
       <button type="submit">로그인</button>
     </form>
 
-    <form action="/logout" method="get">
+    <!-- <form action="/login" method="get">
+      <button type="submit">로그인</button>
+    </form> -->
+
+    <form action="/logout" method="post">
       <button type="submit">로그아웃</button>
     </form>
 
-    <input type="button" value="버튼" onClick="location.href=''">
+    <input type="button" value="버튼" onClick="location.href='https://syedu.webex.com/meet/dusu.kim'">
 
     <ul id="topmenu">
       <li data-menuanchor="p1" class="m1 active"><a href="#p1">삼양데이타시스템</a></li>
@@ -36,530 +40,550 @@
       <li data-menuanchor="p5" class="m5"><a href="#p5"><img src="img/icon/html_icon.png" alt="아이콘" class="f_img"><img
             src="img/icon/css_icon.png" alt="아이콘" class="f_img"><img src="img/icon/jquery_icon.png" alt="아이콘"></a></li>
     </ul>
-    </nav>
-    <div id="fullpage">
-      <div id="d1" class="section" data-anchor="p1">
-
-        <form action="/room" method="post">
-          <div class="inputWrap">
-            <div class="destination">
-              <span> MeetingRoomNumber </span> <input type="text" name="destination"><input class="sendbtn" type="submit">
+  </nav>
+  <div id="fullpage">
+    <div id="d1" class="section" data-anchor="p1">
+      <form action="/room" method="post">
+        <div class="inputWrap">
+          <div class="destination">
+            <div class="title">
+              <span> Title </span> <input type="text" name="title"><br />
             </div>
-          </div>
-        </form>
-    
-      </div>
-    <div id="d2" class="section" data-anchor="p2">
-      <div id="d2_1" class="slide">
-        <div class="il_frame illust">
-          <div class="i_1">
-            <img src="img/ai/po_1.jpg" alt="섬네일"><a href="img/ai/po1.jpg" title="Illust">
-              <div class="des_box">
-                Subject : Hello Kitty<br>
-                Use : Adobe Illustrator<br>
-                Skill : Pen & Object Drawing<br>
-                Date : 2020.05.07
-              </div>
-            </a>
-          </div>
-          <div class="i_2">
-            <img src="img/ai/po_2.jpg" alt="섬네일"><a href="img/ai/po2.jpg" title="Illust">
-              <div class="des_box">
-                Subject : Package Design<br>
-                Use : Adobe Illustrator<br>
-                Skill : 3D & mask<br>
-                Date : 2020.05.11
-              </div>
-            </a>
-          </div>
-          <div class="i_3 m_right">
-            <img src="img/ai/po_3.jpg" alt="섬네일"><a href="img/ai/po3.jpg" title="Illust">
-              <div class="des_box">
-                Subject : Four season banner<br>
-                Use : Adobe Illustrator<br>
-                Skill : clipping mask & path finder & brush & stroke<br>
-                Date : 2020.05.11
-              </div>
-            </a>
-          </div>
-          <div class="i_4">
-            <img src="img/ai/po_4.jpg" alt="섬네일"><a href="img/ai/po4.jpg" title="Illust">
-              <div class="des_box">
-                Subject : 3D Brazil<br>
-                Use : Adobe Illustrator<br>
-                Skill : Effect(3D)<br>
-                Date : 2020.05.20
-              </div>
-            </a>
-          </div>
-          <div class="i_5">
-            <img src="img/ai/po_5.jpg" alt="섬네일"><a href="img/ai/po5.jpg" title="Illust">
-              <div class="des_box">
-                Subject : Orient Chess<br>
-                Use : Adobe Illustrator<br>
-                Skill : 3D & pathfinder & symbol<br>
-                Date : 2020.05.12
-              </div>
-            </a>
-          </div>
-          <div class="i_6 m_right">
-            <img src="img/ai/po_6.jpg" alt="섬네일"><a href="img/ai/po6.jpg" title="Illust">
-              <div class="des_box">
-                Subject : Heart Ace Card<br>
-                Use : Adobe Illustrator<br>
-                Skill : brush & effects<br>
-                Date : 2020.05.18
-              </div>
-            </a>
-          </div>
-          <div class="i_7">
-            <img src="img/ai/po_7.jpg" alt="섬네일"><a href="img/ai/po7.jpg" title="Illust">
-              <div class="des_box">
-                Subject : Takeout Coffee Cup<br>
-                Use : Adobe Illustrator<br>
-                Skill : 3D & symbol & image trace<br>
-                Date : 2020.05.12
-              </div>
-            </a>
-          </div>
-          <div class="i_8">
-            <img src="img/ai/po_8.jpg" alt="섬네일"><a href="img/ai/po8.jpg" title="Illust">
-              <div class="des_box">
-                Subject : City<br>
-                Use : Adobe Illustrator<br>
-                Skill : perspective grid(2vp)<br>
-                Date : 2020.05.19
-              </div>
-            </a>
-          </div>
-          <div class="i_9">
-            <img src="img/ai/po_9.jpg" alt="섬네일"><a href="img/ai/po9.jpg" title="Illust">
-              <div class="des_box">
-                Subject : Tesla Soju<br>
-                Use : Adobe Illustrator<br>
-                Skill : 3D & symbol<br>
-                Date : 2020.05.13
-              </div>
-            </a>
-          </div>
-          <div class="i_10 m_right">
-            <img src="img/ai/po_10.jpg" alt="섬네일"><a href="img/ai/po10.jpg" title="Illust">
-              <div class="des_box">
-                Subject : Cafe Jin<br>
-                Use : Adobe Illustrator<br>
-                Skill : perspective grid(2vp)<br>
-                Date : 2020.05.19
-              </div>
-            </a>
+            <div class="date">
+              <span> Date </span> <input type="date" name="date"><br />
+            </div>
+            <div class="startTime">
+              <span> Start Time </span> <input type="time" name="startTime"><br />
+            </div>
+            <div class="endTime">
+              <span> End Time </span> <input type="time" name="endTime"><br />
+            </div>
+            <div class="dateTime">
+              <span> date Time </span> <input type="datetime-local" name="dateTime"><br />
+            </div>
+            <!-- <div class="name">
+                <span> Name </span> <input type="text" name="userName"><br/>
+            </div>
+            <div class="phone">
+                <span> Phone </span> <input type="text" name="userPhone"><br/>
+            </div> -->
           </div>
         </div>
-        <div id="d2_2" class="slide">
-          <div class="ps_frame photoshop">
-            <div class="pt_1">
-              <img src="img/ps/ph_1.jpg" alt="섬네일"><a href="img/ps/ph1.jpg" title="Illust">
-                <div class="des_box2">
-                  Subject :Water<br>
-                  Use : Adobe Photoshop<br>
-                  Skill : Brush & layer Style<br>
-                  Date : 2020.06.01
-                </div>
-              </a>
+    </div>
+    </form>
+
+  </div>
+  <div id="d2" class="section" data-anchor="p2">
+    <div id="d2_1" class="slide">
+      <div class="il_frame illust">
+        <div class="i_1">
+          <img src="img/ai/po_1.jpg" alt="섬네일"><a href="img/ai/po1.jpg" title="Illust">
+            <div class="des_box">
+              Subject : Hello Kitty<br>
+              Use : Adobe Illustrator<br>
+              Skill : Pen & Object Drawing<br>
+              Date : 2020.05.07
             </div>
-            <div class="pt_2">
-              <img src="img/ps/ph_2.jpg" alt="섬네일"><a href="img/ps/ph2.jpg" title="Illust">
-                <div class="des_box2">
-                  Subject :Movie<br>
-                  Use : Adobe Photoshop<br>
-                  Skill : Brush & layer Style<br>
-                  Date : 2020.05.30
-                </div>
-              </a>
+          </a>
+        </div>
+        <div class="i_2">
+          <img src="img/ai/po_2.jpg" alt="섬네일"><a href="img/ai/po2.jpg" title="Illust">
+            <div class="des_box">
+              Subject : Package Design<br>
+              Use : Adobe Illustrator<br>
+              Skill : 3D & mask<br>
+              Date : 2020.05.11
             </div>
-            <div class="pt_3">
-              <img src="img/ps/ph_3.jpg" alt="섬네일"><a href="img/ps/ph3.jpg" title="Illust">
-                <div class="des_box2">
-                  Subject :3D Mapping<br>
-                  Use : Adobe Photoshop<br>
-                  Skill : Adjust & layer Mask & Layer Style & Transform<br>
-                  Date : 2020.06.04
-                </div>
-              </a>
+          </a>
+        </div>
+        <div class="i_3 m_right">
+          <img src="img/ai/po_3.jpg" alt="섬네일"><a href="img/ai/po3.jpg" title="Illust">
+            <div class="des_box">
+              Subject : Four season banner<br>
+              Use : Adobe Illustrator<br>
+              Skill : clipping mask & path finder & brush & stroke<br>
+              Date : 2020.05.11
             </div>
-            <div class="pt_4 m_right">
-              <img src="img/ps/ph_4.jpg" alt="섬네일"><a href="img/ps/ph_4.jpg" title="Illust">
-                <div class="des_box2">
-                  Subject :Marvel Phone<br>
-                  Use : Adobe Photoshop<br>
-                  Skill : Brush & layer Style & clipping mask<br>
-                  Date : 2020.06.08
-                </div>
-              </a>
+          </a>
+        </div>
+        <div class="i_4">
+          <img src="img/ai/po_4.jpg" alt="섬네일"><a href="img/ai/po4.jpg" title="Illust">
+            <div class="des_box">
+              Subject : 3D Brazil<br>
+              Use : Adobe Illustrator<br>
+              Skill : Effect(3D)<br>
+              Date : 2020.05.20
             </div>
-            <div class="pt_5">
-              <img src="img/ps/ph_5.jpg" alt="섬네일"><a href="img/ps/ph5.jpg" title="Illust">
-                <div class="des_box2">
-                  Subject :Vintage Poster<br>
-                  Use : Adobe Photoshop<br>
-                  Skill : Adjust & Filter & Brush & Layer Style<br>
-                  Date : 2020.06.02
-                </div>
-              </a>
+          </a>
+        </div>
+        <div class="i_5">
+          <img src="img/ai/po_5.jpg" alt="섬네일"><a href="img/ai/po5.jpg" title="Illust">
+            <div class="des_box">
+              Subject : Orient Chess<br>
+              Use : Adobe Illustrator<br>
+              Skill : 3D & pathfinder & symbol<br>
+              Date : 2020.05.12
             </div>
-            <div class="pt_6">
-              <img src="img/ps/ph_6.jpg" alt="섬네일"><a href="img/ps/ph6.jpg" title="Illust">
-                <div class="des_box2">
-                  Subject :Hulk<br>
-                  Use : Adobe Photoshop<br>
-                  Skill : Brush & layer Style<br>
-                  Date : 2020.06.09
-                </div>
-              </a>
+          </a>
+        </div>
+        <div class="i_6 m_right">
+          <img src="img/ai/po_6.jpg" alt="섬네일"><a href="img/ai/po6.jpg" title="Illust">
+            <div class="des_box">
+              Subject : Heart Ace Card<br>
+              Use : Adobe Illustrator<br>
+              Skill : brush & effects<br>
+              Date : 2020.05.18
             </div>
-            <div class="pt_7">
-              <img src="img/ps/ph_7.jpg" alt="섬네일"><a href="img/ps/ph7.jpg" title="Illust">
-                <div class="des_box2">
-                  Subject :Marvel Poster<br>
-                  Use : Adobe Photoshop<br>
-                  Skill : Brush & layer Style<br>
-                  Date : 2020.06.05
-                </div>
-              </a>
+          </a>
+        </div>
+        <div class="i_7">
+          <img src="img/ai/po_7.jpg" alt="섬네일"><a href="img/ai/po7.jpg" title="Illust">
+            <div class="des_box">
+              Subject : Takeout Coffee Cup<br>
+              Use : Adobe Illustrator<br>
+              Skill : 3D & symbol & image trace<br>
+              Date : 2020.05.12
             </div>
-            <div class="pt_8">
-              <img src="img/ps/ph_8.jpg" alt="섬네일"><a href="img/ps/ph8.jpg" title="Illust">
-                <div class="des_box2">
-                  Subject :Thanos<br>
-                  Use : Adobe Photoshop<br>
-                  Skill : Brush & layer Style & Filter<br>
-                  Date : 2020.06.11
-                </div>
-              </a>
+          </a>
+        </div>
+        <div class="i_8">
+          <img src="img/ai/po_8.jpg" alt="섬네일"><a href="img/ai/po8.jpg" title="Illust">
+            <div class="des_box">
+              Subject : City<br>
+              Use : Adobe Illustrator<br>
+              Skill : perspective grid(2vp)<br>
+              Date : 2020.05.19
             </div>
-            <div class="pt_9">
-              <img src="img/ps/ph_9.jpg" alt="섬네일"><a href="img/ps/ph9.jpg" title="Illust">
-                <div class="des_box2">
-                  Subject :Drink Soda<br>
-                  Use : Adobe Photoshop<br>
-                  Skill : Brush & layer Style & Channels<br>
-                  Date : 2020.06.03
-                </div>
-              </a>
+          </a>
+        </div>
+        <div class="i_9">
+          <img src="img/ai/po_9.jpg" alt="섬네일"><a href="img/ai/po9.jpg" title="Illust">
+            <div class="des_box">
+              Subject : Tesla Soju<br>
+              Use : Adobe Illustrator<br>
+              Skill : 3D & symbol<br>
+              Date : 2020.05.13
             </div>
-            <div class="pt_10 m_right">
-              <img src="img/ps/ph_10.jpg" alt="섬네일"><a href="img/ps/ph10.jpg" title="Illust">
-                <div class="des_box2">
-                  Subject :iPhone<br>
-                  Use : Adobe Photoshop<br>
-                  Skill : 3D Layer & layer Style<br>
-                  Date : 2020.06.05
-                </div>
-              </a>
+          </a>
+        </div>
+        <div class="i_10 m_right">
+          <img src="img/ai/po_10.jpg" alt="섬네일"><a href="img/ai/po10.jpg" title="Illust">
+            <div class="des_box">
+              Subject : Cafe Jin<br>
+              Use : Adobe Illustrator<br>
+              Skill : perspective grid(2vp)<br>
+              Date : 2020.05.19
             </div>
+          </a>
+        </div>
+      </div>
+      <div id="d2_2" class="slide">
+        <div class="ps_frame photoshop">
+          <div class="pt_1">
+            <img src="img/ps/ph_1.jpg" alt="섬네일"><a href="img/ps/ph1.jpg" title="Illust">
+              <div class="des_box2">
+                Subject :Water<br>
+                Use : Adobe Photoshop<br>
+                Skill : Brush & layer Style<br>
+                Date : 2020.06.01
+              </div>
+            </a>
+          </div>
+          <div class="pt_2">
+            <img src="img/ps/ph_2.jpg" alt="섬네일"><a href="img/ps/ph2.jpg" title="Illust">
+              <div class="des_box2">
+                Subject :Movie<br>
+                Use : Adobe Photoshop<br>
+                Skill : Brush & layer Style<br>
+                Date : 2020.05.30
+              </div>
+            </a>
+          </div>
+          <div class="pt_3">
+            <img src="img/ps/ph_3.jpg" alt="섬네일"><a href="img/ps/ph3.jpg" title="Illust">
+              <div class="des_box2">
+                Subject :3D Mapping<br>
+                Use : Adobe Photoshop<br>
+                Skill : Adjust & layer Mask & Layer Style & Transform<br>
+                Date : 2020.06.04
+              </div>
+            </a>
+          </div>
+          <div class="pt_4 m_right">
+            <img src="img/ps/ph_4.jpg" alt="섬네일"><a href="img/ps/ph_4.jpg" title="Illust">
+              <div class="des_box2">
+                Subject :Marvel Phone<br>
+                Use : Adobe Photoshop<br>
+                Skill : Brush & layer Style & clipping mask<br>
+                Date : 2020.06.08
+              </div>
+            </a>
+          </div>
+          <div class="pt_5">
+            <img src="img/ps/ph_5.jpg" alt="섬네일"><a href="img/ps/ph5.jpg" title="Illust">
+              <div class="des_box2">
+                Subject :Vintage Poster<br>
+                Use : Adobe Photoshop<br>
+                Skill : Adjust & Filter & Brush & Layer Style<br>
+                Date : 2020.06.02
+              </div>
+            </a>
+          </div>
+          <div class="pt_6">
+            <img src="img/ps/ph_6.jpg" alt="섬네일"><a href="img/ps/ph6.jpg" title="Illust">
+              <div class="des_box2">
+                Subject :Hulk<br>
+                Use : Adobe Photoshop<br>
+                Skill : Brush & layer Style<br>
+                Date : 2020.06.09
+              </div>
+            </a>
+          </div>
+          <div class="pt_7">
+            <img src="img/ps/ph_7.jpg" alt="섬네일"><a href="img/ps/ph7.jpg" title="Illust">
+              <div class="des_box2">
+                Subject :Marvel Poster<br>
+                Use : Adobe Photoshop<br>
+                Skill : Brush & layer Style<br>
+                Date : 2020.06.05
+              </div>
+            </a>
+          </div>
+          <div class="pt_8">
+            <img src="img/ps/ph_8.jpg" alt="섬네일"><a href="img/ps/ph8.jpg" title="Illust">
+              <div class="des_box2">
+                Subject :Thanos<br>
+                Use : Adobe Photoshop<br>
+                Skill : Brush & layer Style & Filter<br>
+                Date : 2020.06.11
+              </div>
+            </a>
+          </div>
+          <div class="pt_9">
+            <img src="img/ps/ph_9.jpg" alt="섬네일"><a href="img/ps/ph9.jpg" title="Illust">
+              <div class="des_box2">
+                Subject :Drink Soda<br>
+                Use : Adobe Photoshop<br>
+                Skill : Brush & layer Style & Channels<br>
+                Date : 2020.06.03
+              </div>
+            </a>
+          </div>
+          <div class="pt_10 m_right">
+            <img src="img/ps/ph_10.jpg" alt="섬네일"><a href="img/ps/ph10.jpg" title="Illust">
+              <div class="des_box2">
+                Subject :iPhone<br>
+                Use : Adobe Photoshop<br>
+                Skill : 3D Layer & layer Style<br>
+                Date : 2020.06.05
+              </div>
+            </a>
           </div>
         </div>
       </div>
     </div>
-    <div id="d3" class="section" data-anchor="p3">
-      <div class="max_frame 3d">
-        <div class="m_1">
-          <div class="m_scale">
-            <img src="img/max/m_1.jpg" alt="섬네일"><a href="img/max/m1.jpg" title="3D MAX">
-              <div class="des_box3">
-              </div>
-            </a>
-          </div>
+  </div>
+  <div id="d3" class="section" data-anchor="p3">
+    <div class="max_frame 3d">
+      <div class="m_1">
+        <div class="m_scale">
+          <img src="img/max/m_1.jpg" alt="섬네일"><a href="img/max/m1.jpg" title="3D MAX">
+            <div class="des_box3">
+            </div>
+          </a>
         </div>
-        <div class="m_2">
-          <img src="img/max/m_2.jpg" alt="섬네일"><a href="" title="3D MAX">
+      </div>
+      <div class="m_2">
+        <img src="img/max/m_2.jpg" alt="섬네일"><a href="" title="3D MAX">
 
-          </a>
-        </div>
-        <div class="m_3">
-          <img src="img/max/m_3.jpg" alt="섬네일"><a href="" title="3D MAX">
-          </a>
-        </div>
-        <div class="m_4 b_none">
-          <img src="none" alt=""><a href="" title="3D MAX">
-          </a>
-        </div>
-        <div class="m_5">
-          <div class="m_scale">
+        </a>
+      </div>
+      <div class="m_3">
+        <img src="img/max/m_3.jpg" alt="섬네일"><a href="" title="3D MAX">
+        </a>
+      </div>
+      <div class="m_4 b_none">
+        <img src="none" alt=""><a href="" title="3D MAX">
+        </a>
+      </div>
+      <div class="m_5">
+        <div class="m_scale">
 
-            <img src="img/max/m_5.jpg" alt="섬네일"><a href="img/max/m5.jpg" title="3D MAX">
-              <div class="des_box3">
-              </div>
-            </a>
-          </div>
-        </div>
-        <div class="m_6 m_right">
-          <div class="m_scale">
-            <img src="img/max/m_6.jpg" alt="섬네일"><a href="img/max/m6.jpg" title="3D MAX">
-              <div class="des_box3">
-              </div>
-            </a>
-          </div>
-        </div>
-        <div class="m_7">
-          <img src="img/max/m_7.jpg" alt="섬네일">
-          <div class="m_7_over">
-            <a href="http://www.youtube.com/watch?v=SUJM0sawKJU" class="m_movie">
-              <img src="img/v1_thumb_over.png" alt="플레이버튼">
-            </a>
-          </div>
-        </div>
-        <div class="m_8">
-          <a href="" title="3D MAX">
-            <h1>3</h1>
+          <img src="img/max/m_5.jpg" alt="섬네일"><a href="img/max/m5.jpg" title="3D MAX">
+            <div class="des_box3">
+            </div>
           </a>
         </div>
-        <div class="m_9">
-          <a href="" title="3D MAX">
-            <h1>D</h1>
+      </div>
+      <div class="m_6 m_right">
+        <div class="m_scale">
+          <img src="img/max/m_6.jpg" alt="섬네일"><a href="img/max/m6.jpg" title="3D MAX">
+            <div class="des_box3">
+            </div>
           </a>
         </div>
-        <div class="m_10">
-          <a href="" title="3D MAX">
-            <h1>S</h1>
+      </div>
+      <div class="m_7">
+        <img src="img/max/m_7.jpg" alt="섬네일">
+        <div class="m_7_over">
+          <a href="http://www.youtube.com/watch?v=SUJM0sawKJU" class="m_movie">
+            <img src="img/v1_thumb_over.png" alt="플레이버튼">
           </a>
         </div>
-        <div class="m_11">
-          <div class="m_scale">
-            <img src="img/max/m_11.jpg" alt="섬네일"><a href="img/max/m11.jpg" title="3D MAX">
-              <div class="des_box3">
-              </div>
-            </a>
-          </div>
-        </div>
-        <div class="m_12 m_right">
-          <img src="img/max/m_12.jpg" alt="섬네일">
-          <div class="m_12_over">
-            <a href="http://www.youtube.com/watch?v=H0dpLRGWdcU" class="m_movie">
-              <img src="img/v1_thumb_over.png" alt="플레이버튼">
-            </a>
-          </div>
-        </div>
-        <div class="m_13 b_none">
-          <img src="none" alt=""><a href="" title="Illust">
+      </div>
+      <div class="m_8">
+        <a href="" title="3D MAX">
+          <h1>3</h1>
+        </a>
+      </div>
+      <div class="m_9">
+        <a href="" title="3D MAX">
+          <h1>D</h1>
+        </a>
+      </div>
+      <div class="m_10">
+        <a href="" title="3D MAX">
+          <h1>S</h1>
+        </a>
+      </div>
+      <div class="m_11">
+        <div class="m_scale">
+          <img src="img/max/m_11.jpg" alt="섬네일"><a href="img/max/m11.jpg" title="3D MAX">
+            <div class="des_box3">
+            </div>
           </a>
         </div>
-        <div class="m_14">
-          <div class="m_scale">
-            <img src="img/max/m_14.jpg" alt="섬네일"><a href="img/max/m14.jpg" title="3D MAX">
-              <div class="des_box3">
-              </div>
-            </a>
-          </div>
-        </div>
-        <div class="m_15">
-          <a href="" title="3D MAX">
-            <h1>M</h1>
+      </div>
+      <div class="m_12 m_right">
+        <img src="img/max/m_12.jpg" alt="섬네일">
+        <div class="m_12_over">
+          <a href="http://www.youtube.com/watch?v=H0dpLRGWdcU" class="m_movie">
+            <img src="img/v1_thumb_over.png" alt="플레이버튼">
           </a>
         </div>
-        <div class="m_16">
-          <a href="" title="3D MAX">
-            <h1>A</h1>
+      </div>
+      <div class="m_13 b_none">
+        <img src="none" alt=""><a href="" title="Illust">
+        </a>
+      </div>
+      <div class="m_14">
+        <div class="m_scale">
+          <img src="img/max/m_14.jpg" alt="섬네일"><a href="img/max/m14.jpg" title="3D MAX">
+            <div class="des_box3">
+            </div>
           </a>
         </div>
-        <div class="m_17">
-          <a href="" title="3D MAX">
-            <h1>X</h1>
+      </div>
+      <div class="m_15">
+        <a href="" title="3D MAX">
+          <h1>M</h1>
+        </a>
+      </div>
+      <div class="m_16">
+        <a href="" title="3D MAX">
+          <h1>A</h1>
+        </a>
+      </div>
+      <div class="m_17">
+        <a href="" title="3D MAX">
+          <h1>X</h1>
+        </a>
+      </div>
+      <div class="m_18 m_right">
+        <div class="m_scale">
+          <img src="img/max/m_18.jpg" alt="섬네일"><a href="img/max/m18.jpg" title="3D MAX">
+            <div class="des_box3">
+            </div>
           </a>
         </div>
-        <div class="m_18 m_right">
-          <div class="m_scale">
-            <img src="img/max/m_18.jpg" alt="섬네일"><a href="img/max/m18.jpg" title="3D MAX">
-              <div class="des_box3">
-              </div>
-            </a>
-          </div>
-        </div>
-        <div class="m_19">
-          <img src="img/max/m_19.jpg" alt="섬네일">
-          <div class="m_19_over">
-            <a href="http://www.youtube.com/watch?v=_msPIFnmtuc" class="m_movie">
-              <img src="img/v1_thumb_over.png" alt="플레이버튼">
-            </a>
-          </div>
-        </div>
-        <div class="m_20">
-          <div class="m_scale">
-            <img src="img/max/m_20.jpg" alt="섬네일"><a href="img/max/m20.png" title="3D MAX">
-              <div class="des_box3">
-              </div>
-            </a>
-          </div>
-        </div>
-        <div class="m_21 b_none">
-          <img src="none" alt=""><a href="" title="Illust">
+      </div>
+      <div class="m_19">
+        <img src="img/max/m_19.jpg" alt="섬네일">
+        <div class="m_19_over">
+          <a href="http://www.youtube.com/watch?v=_msPIFnmtuc" class="m_movie">
+            <img src="img/v1_thumb_over.png" alt="플레이버튼">
           </a>
         </div>
-        <div class="m_22">
-          <div class="m_scale">
-            <img src="img/max/m_22.jpg" alt="섬네일"><a href="img/max/m22.jpg" title="3D MAX">
-              <div class="des_box3">
-              </div>
-            </a>
-          </div>
+      </div>
+      <div class="m_20">
+        <div class="m_scale">
+          <img src="img/max/m_20.jpg" alt="섬네일"><a href="img/max/m20.png" title="3D MAX">
+            <div class="des_box3">
+            </div>
+          </a>
         </div>
-        <div class="m_23">
-          <div class="m_scale">
-            <img src="img/max/m_23.jpg" alt="섬네일"><a href="img/max/m23.jpg" title="3D MAX">
-              <div class="des_box3">
-              </div>
-            </a>
-          </div>
+      </div>
+      <div class="m_21 b_none">
+        <img src="none" alt=""><a href="" title="Illust">
+        </a>
+      </div>
+      <div class="m_22">
+        <div class="m_scale">
+          <img src="img/max/m_22.jpg" alt="섬네일"><a href="img/max/m22.jpg" title="3D MAX">
+            <div class="des_box3">
+            </div>
+          </a>
         </div>
-        <div class="m_24 m_right b_none">
-          <img src="none" alt=""><a href="" title="Illust">
+      </div>
+      <div class="m_23">
+        <div class="m_scale">
+          <img src="img/max/m_23.jpg" alt="섬네일"><a href="img/max/m23.jpg" title="3D MAX">
+            <div class="des_box3">
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="m_24 m_right b_none">
+        <img src="none" alt=""><a href="" title="Illust">
 
+        </a>
+      </div>
+    </div>
+  </div>
+  <div id="d4" class="section" data-anchor="p4">
+    <div id="d4_1" class="slide">
+      <video src="media/m1.mp4" autoplay muted loop data-autoplay></video>
+      <div class="pr_frame">
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="prpr">
+                <img src="img/thum1.jpg" alt="썸네일">
+                <a href="http://www.youtube.com/watch?v=sXdHXVJQwlw" class="pr_movie">
+                  <img src="img/play2.png" alt="오버이미지" class="over">
+                </a>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="prpr">
+                <img src="img/thum2.jpg" alt="썸네일">
+                <a href="http://www.youtube.com/watch?v=_RW9eYRKP3o" class="pr_movie">
+                  <img src="img/play2.png" alt="오버이미지" class="over">
+                </a>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="prpr">
+                <img src="img/thum3.jpg" alt="썸네일">
+                <a href="http://www.youtube.com/watch?v=AudYb1d0J08" class="pr_movie">
+                  <img src="img/play2.png" alt="오버이미지" class="over">
+                </a>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="prpr">
+                <img src="img/thum4.jpg" alt="썸네일">
+                <a href="http://www.youtube.com/watch?v=8V2bwUVrTlI" class="pr_movie">
+                  <img src="img/play2.png" alt="오버이미지" class="over">
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tbox">
+        <h1>Premiere</h1>
+      </div>
+      <div class="tbox2"></div>
+    </div>
+    <div id="d4_2" class="slide">
+      <div class="ae_frame mv">
+        <div class="a1">
+          <img src="img/ae/roomKit1.png" alt="썸네일이미지">
+          <a href="http://www.youtube.com/watch?v=8iXpIDh3udI" class="ae_movie"><img src="img/ae/roomKit.png" alt="큰썸네일"
+              class="a_thumb">
           </a>
+        </div>
+        <div class="a2">
+          <img src="img/ae/ae2.png" alt="썸네일이미지">
+          <a href="http://www.youtube.com/watch?v=hXoVRtiRkP4" class="ae_movie"><img src="img/ae/ae_2.png" alt="큰썸네일"
+              class="a_thumb2">
+          </a>
+        </div>
+        <div class="a3">
+          <img src="img/ae/ae3.png" alt="썸네일이미지">
+          <a href="http://www.youtube.com/watch?v=jD1fuYakMU8" class="ae_movie"><img src="img/ae/ae_3.png" alt="큰썸네일"
+              class="a_thumb2">
+          </a>
+        </div>
+        <div class="a4 m_right">
+          <img src="img/ae/ae4.png" alt="썸네일이미지">
+          <a href="http://www.youtube.com/watch?v=aTfdl1yZ0tY" class="ae_movie"><img src="img/ae/ae_4.png" alt="큰썸네일"
+              class="a_thumb3">
+          </a>
+        </div>
+        <div class="a5">
+          <img src="img/ae/ae5.png" alt="썸네일이미지">
+          <a href="http://www.youtube.com/watch?v=AMRHAMp2o0w" class="ae_movie"><img src="img/ae/ae_5.png" alt="큰썸네일"
+              class="a_thumb2">
+          </a>
+        </div>
+        <div class="a6">
+          <img src="img/ae/ae6.png" alt="썸네일이미지">
+          <a href="http://www.youtube.com/watch?v=LppfxwFDHMs" class="ae_movie"><img src="img/ae/ae_6.png" alt="큰썸네일"
+              class="a_thumb2">
+          </a>
+        </div>
+        <div class="a7">
+          <img src="img/ae/ae7.png" alt="썸네일이미지">
+          <a href="http://www.youtube.com/watch?v=hHOPLBgQ6vI" class="ae_movie"><img src="img/ae/ae_7.png" alt="큰썸네일"
+              class="a_thumb2">
+          </a>
+        </div>
+        <div class="a8 m_right">
+          <img src="img/ae/ae8.png" alt="썸네일이미지">
+          <a href="http://www.youtube.com/watch?v=SEDAsQR_egw" class="ae_movie"><img src="img/ae/ae_8.png" alt="큰썸네일"
+              class="a_thumb3">
+          </a>
+        </div>
+      </div>
+      <div class="tbox1">
+        <h1><span class="at1">A</span>fter <span class="at2">E</span>ffects </h1>
+      </div>
+    </div>
+  </div>
+  <div id="d5" class="section" data-anchor="p5">
+    <div class="fp1">
+      <div class="preview_wrapper">
+        <div class="web_preview">
+          <img src="img/fp/title1.png" alt="타이틀" class="code_title">
+          <img src="img/com.png" alt="사이트">
+          <div class="scroll_bg">
+            <a href="http://nojin06.dothome.co.kr/marvel/" target="_blank">
+              <img src="img/fp/marvel.jpg" alt="">
+            </a>
+          </div>
         </div>
       </div>
     </div>
-    <div id="d4" class="section" data-anchor="p4">
-      <div id="d4_1" class="slide">
-        <video src="media/m1.mp4" autoplay muted loop data-autoplay></video>
-        <div class="pr_frame">
-          <div class="swiper-container">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <div class="prpr">
-                  <img src="img/thum1.jpg" alt="썸네일">
-                  <a href="http://www.youtube.com/watch?v=sXdHXVJQwlw" class="pr_movie">
-                    <img src="img/play2.png" alt="오버이미지" class="over">
-                  </a>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="prpr">
-                  <img src="img/thum2.jpg" alt="썸네일">
-                  <a href="http://www.youtube.com/watch?v=_RW9eYRKP3o" class="pr_movie">
-                    <img src="img/play2.png" alt="오버이미지" class="over">
-                  </a>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="prpr">
-                  <img src="img/thum3.jpg" alt="썸네일">
-                  <a href="http://www.youtube.com/watch?v=AudYb1d0J08" class="pr_movie">
-                    <img src="img/play2.png" alt="오버이미지" class="over">
-                  </a>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="prpr">
-                  <img src="img/thum4.jpg" alt="썸네일">
-                  <a href="http://www.youtube.com/watch?v=8V2bwUVrTlI" class="pr_movie">
-                    <img src="img/play2.png" alt="오버이미지" class="over">
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="tbox">
-          <h1>Premiere</h1>
-        </div>
-        <div class="tbox2"></div>
-      </div>
-      <div id="d4_2" class="slide">
-        <div class="ae_frame mv">
-          <div class="a1">
-            <img src="img/ae/roomKit1.png" alt="썸네일이미지">
-            <a href="http://www.youtube.com/watch?v=8iXpIDh3udI" class="ae_movie"><img src="img/ae/roomKit.png"
-                alt="큰썸네일" class="a_thumb">
+    <div class="fp2">
+      <div class="preview_wrapper">
+        <div class="web_preview">
+          <img src="img/fp/title2.png" alt="타이틀" class="code_title">
+          <img src="img/com.png" alt="사이트">
+          <div class="scroll_bg">
+            <a href="http://nojin06.dothome.co.kr/apple/" target="_blank">
+              <img src="img/fp/apple.jpg" alt="">
             </a>
           </div>
-          <div class="a2">
-            <img src="img/ae/ae2.png" alt="썸네일이미지">
-            <a href="http://www.youtube.com/watch?v=hXoVRtiRkP4" class="ae_movie"><img src="img/ae/ae_2.png" alt="큰썸네일"
-                class="a_thumb2">
-            </a>
-          </div>
-          <div class="a3">
-            <img src="img/ae/ae3.png" alt="썸네일이미지">
-            <a href="http://www.youtube.com/watch?v=jD1fuYakMU8" class="ae_movie"><img src="img/ae/ae_3.png" alt="큰썸네일"
-                class="a_thumb2">
-            </a>
-          </div>
-          <div class="a4 m_right">
-            <img src="img/ae/ae4.png" alt="썸네일이미지">
-            <a href="http://www.youtube.com/watch?v=aTfdl1yZ0tY" class="ae_movie"><img src="img/ae/ae_4.png" alt="큰썸네일"
-                class="a_thumb3">
-            </a>
-          </div>
-          <div class="a5">
-            <img src="img/ae/ae5.png" alt="썸네일이미지">
-            <a href="http://www.youtube.com/watch?v=AMRHAMp2o0w" class="ae_movie"><img src="img/ae/ae_5.png" alt="큰썸네일"
-                class="a_thumb2">
-            </a>
-          </div>
-          <div class="a6">
-            <img src="img/ae/ae6.png" alt="썸네일이미지">
-            <a href="http://www.youtube.com/watch?v=LppfxwFDHMs" class="ae_movie"><img src="img/ae/ae_6.png" alt="큰썸네일"
-                class="a_thumb2">
-            </a>
-          </div>
-          <div class="a7">
-            <img src="img/ae/ae7.png" alt="썸네일이미지">
-            <a href="http://www.youtube.com/watch?v=hHOPLBgQ6vI" class="ae_movie"><img src="img/ae/ae_7.png" alt="큰썸네일"
-                class="a_thumb2">
-            </a>
-          </div>
-          <div class="a8 m_right">
-            <img src="img/ae/ae8.png" alt="썸네일이미지">
-            <a href="http://www.youtube.com/watch?v=SEDAsQR_egw" class="ae_movie"><img src="img/ae/ae_8.png" alt="큰썸네일"
-                class="a_thumb3">
-            </a>
-          </div>
-        </div>
-        <div class="tbox1">
-          <h1><span class="at1">A</span>fter <span class="at2">E</span>ffects </h1>
         </div>
       </div>
     </div>
-    <div id="d5" class="section" data-anchor="p5">
-      <div class="fp1">
-        <div class="preview_wrapper">
-          <div class="web_preview">
-            <img src="img/fp/title1.png" alt="타이틀" class="code_title">
-            <img src="img/com.png" alt="사이트">
-            <div class="scroll_bg">
-              <a href="http://nojin06.dothome.co.kr/marvel/" target="_blank">
-                <img src="img/fp/marvel.jpg" alt="">
-              </a>
-            </div>
+    <div class="fp3">
+      <div class="preview_wrapper">
+        <div class="web_preview">
+          <img src="img/fp/title3.png" alt="타이틀" class="code_title">
+          <img src="img/com.png" alt="사이트">
+          <div class="scroll_bg">
+            <a href="http://nojin06.dothome.co.kr/game/" target="_blank">
+              <img src="img/fp/game.jpg" alt="">
+            </a>
           </div>
         </div>
       </div>
-      <div class="fp2">
-        <div class="preview_wrapper">
-          <div class="web_preview">
-            <img src="img/fp/title2.png" alt="타이틀" class="code_title">
-            <img src="img/com.png" alt="사이트">
-            <div class="scroll_bg">
-              <a href="http://nojin06.dothome.co.kr/apple/" target="_blank">
-                <img src="img/fp/apple.jpg" alt="">
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="fp3">
-        <div class="preview_wrapper">
-          <div class="web_preview">
-            <img src="img/fp/title3.png" alt="타이틀" class="code_title">
-            <img src="img/com.png" alt="사이트">
-            <div class="scroll_bg">
-              <a href="http://nojin06.dothome.co.kr/game/" target="_blank">
-                <img src="img/fp/game.jpg" alt="">
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
+    </div>
 
-    </div>
+  </div>
   </div>
 </body>
 <script src="js/jquery.fullpage.js"></script>

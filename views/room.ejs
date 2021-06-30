@@ -1,0 +1,42 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/v1/meetings" method="post">
+        <div class="inputWrap">
+          <div class="destination">
+            <div class="title">
+              <span> Title </span> <input type="text" name="title"><br />
+            </div>
+            <div class="date">
+              <span> Date </span> <input type="date" name="date"><br />
+            </div>
+            <div class="startTime">
+              <span> Start Time </span> <input type="time" name="startTime"><br />
+            </div>
+            <div class="endTime">
+              <span> End Time </span> <input type="time" name="endTime"><br />
+            </div>
+            <!-- <div class="dateTime">
+                <span> date Time </span> <input type="datetime-local" name="dateTime"><br />
+              </div> -->
+            <!-- <div class="name">
+                <span> Name </span> <input type="text" name="userName"><br/>
+            </div>
+            <div class="phone">
+                <span> Phone </span> <input type="text" name="userPhone"><br/>
+            </div> -->
+          </div>
+        </div>
+    </div>
+    <input class="sendbtn" type="submit">
+    <script>
+        document.getElementById('dateTime').value=new Date().toISOString().slice(0, -1);
+    </script>
+    </form>
+</body>
+</html>

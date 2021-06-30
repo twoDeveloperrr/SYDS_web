@@ -62,7 +62,8 @@ passport.use('local-join', new LocalStrategy({
     try {
         const connection = await pool.getConnection(async conn => conn);
         try {
-            // 사용자 DB 가져오기
+            console.log('passport-local');
+            // // 사용자 DB 가져오기
             const getUserFormQuery = `select userEmail, userPassword from user where userEmail = ? and userPassword = ?;`;
             const getUserFormParams = [email, password];
             
@@ -71,31 +72,31 @@ passport.use('local-join', new LocalStrategy({
                 password: password
             };
 
-            const [getUserFormResult] = await connection.query(getUserFormQuery, getUserFormParams);
-            if (getUserFormResult[0].userEmail === email) {
-                return done(null, user);
-            }
+            // const [getUserFormResult] = await connection.query(getUserFormQuery, getUserFormParams);
+            // if (getUserFormResult[0].userEmail === email) {
+            //     return done(null, user);
+            // }
 
         
-            // // 이미 존재하는 이메일 예외 시킴
-            // const getUserQuery = `select exists(select userEmail, userPassword from user where userEmail = ? and userPassword = ?) as exist;`;
-            // const getUserParams = [email, password];
-            // const [getUserResult] = await connection.query(getUserQuery, getUserParams);
-            // if (getUserResult[0].exist === 1) {
-            //     console.log("fail")
-            //     return done(null, false, { message: 'your email is already used' });
-            // } else {
-            //     const insertJoinQuery = `insert into user(userEmail, userPassword, userName, userPhone) values(?, ?, ?, ?);`;
-            //     const insertJoinParams = [email, password, userName, userPhone];
-            //     const [insertJoinResult] = await connection.query(insertJoinQuery, insertJoinParams);
-            //     connection.release();
-            //     console.log(user)
-            //     return done(null, user)
-            // }
+            // 이미 존재하는 이메일 예외 시킴
+            const getUserQuery = `select exists(select userEmail, userPassword from user where userEmail = ? and userPassword = ?) as exist;`;
+            const getUserParams = [email, password];
+            const [getUserResult] = await connection.query(getUserQuery, getUserParams);
+            if (getUserResult[0].exist === 1) {
+                console.log("fail")
+                return done(null, false, { message: 'your email is already used' });
+            } else {
+                const insertJoinQuery = `insert into user(userEmail, userPassword, userName, userPhone) values(?, ?, ?, ?);`;
+                const insertJoinParams = [email, password, userName, userPhone];
+                const [insertJoinResult] = await connection.query(insertJoinQuery, insertJoinParams);
+                connection.release();
+                console.log(user)
+                return done(null, user)
+            }
 
     
 
-            //return done(null, { 'email': email, 'password': password });
+            // return done(null, { 'email': email, 'password': password });
 
             // // 사용자 DB 가져오기
             // const getUserFormQuery = `select userEmail, userPassword from user where userEmail = ? and userPassword = ?;`;
@@ -125,7 +126,7 @@ exports.getHome = async function (req, res) {
     if (errMsg) msg = errMsg;
 
     console.log('HI');
-    res.render('join.ejs', { 'message': msg });
+    res.render('join_sample.ejs', { 'message': msg });
 };
 
 

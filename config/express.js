@@ -49,8 +49,6 @@ module.exports = function () {
     require('../src/web/routes/userRoute')(app);
     require('../src/web/routes/webexOauthRoute')(app);
 
-    require('../src/web/routes/userLoginRoute')(app);
-
     /* Web Admin*/
     // require('../src/web-admin/routes/indexRoute')(app);
     return app;
